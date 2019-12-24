@@ -1,0 +1,63 @@
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo apt-get install python-pip python-dev
+
+wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/download/v1.0.1/tensorflow-1.0.1-cp27-none-linux_armv7l.whl
+
+sudo pip install tensorflow-1.0.1-cp27-none-linux_armv7l.whl
+
+sudo pip uninstall mock
+
+sudo pip install mock
+
+pip2 show tensorflow
+
+mkdir pro
+
+cd pro 
+
+sudo nano launcher.sh
+
+#!/bin/sh
+# launcher.sh
+# navigate to home directory, then to this directory, then execute python script, then back home
+
+cd /
+cd home/pi/pro
+sudo python2 pro.py
+cd /
+
+chmod 755 launcher.sh
+
+sh launcher.sh
+
+mkdir logs
+
+sudo crontab -e
+
+sudo reboot
+
+sudo nano /etc/dphys-swapfile 
+
+
+    CONF_SWAPSIZE=1024
+
+
+/etc/init.d/dphys-swapfile restart
+
+sudo reboot
+
+nano tightvnc.desktop
+
+
+
+
+
+
+
+
+
+
