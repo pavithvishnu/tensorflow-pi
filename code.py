@@ -14,7 +14,7 @@ import numpy as np
 import tensorflow as tf
 # Use BCM GPIO references
 # instead of physical pin numbers
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 camera = picamera.PiCamera()
 
  
